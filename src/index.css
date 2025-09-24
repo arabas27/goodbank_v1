@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: theme('colors.slate.900');
+  background-color: theme('colors.slate.50');
+  font-family: theme('fontFamily.body');
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+a {
+  @apply text-brand-600 hover:text-brand-700 font-medium transition-colors;
+}
+
+button {
+  @apply font-medium;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.15), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(249, 115, 22, 0.15), transparent 45%);
+}
