@@ -26,7 +26,7 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="th">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           href="#main-content"
           className="absolute left-6 top-4 z-[60] rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-300 [&:not(:focus-visible)]:sr-only"
         >
-          Skip to main content
+          ข้ามไปยังเนื้อหาหลัก
         </a>
         <Navbar />
         {children}
@@ -55,15 +55,15 @@ export default function App() {
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
+  let message = "อุ๊ย!";
+  let details = "เกิดข้อผิดพลาดที่ไม่คาดคิด";
   let stack: string | undefined;
 
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
+    message = error.status === 404 ? "404" : "ข้อผิดพลาด";
     details =
       error.status === 404
-        ? "The requested page could not be found."
+        ? "ไม่พบหน้าที่ร้องขอ"
         : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;

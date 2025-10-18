@@ -10,70 +10,70 @@ type Notice = {
 
 const notices: Notice[] = [
   {
-    title: "Scheduled maintenance window",
+    title: "ช่วงเวลาบำรุงรักษาตามกำหนดการ",
     detail:
-      "Online banking will be unavailable Sunday from 1:00–3:00 AM ET while we deploy infrastructure upgrades. Mobile debit card transactions will remain online.",
-    date: "Mar 24, 2025",
+      "บริการธนาคารออนไลน์จะไม่สามารถใช้งานได้ในวันอาทิตย์ เวลา 01:00–03:00 น. ET เนื่องจากการอัปเกรดโครงสร้างพื้นฐาน การทำรายการบัตรเดบิตผ่านมือถือยังคงใช้งานได้ตามปกติ",
+    date: "24 มี.ค. 2025",
     dateTime: "2025-03-24",
-    category: "Systems",
+    category: "ระบบ",
     accent: "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-200",
-    action: { label: "Maintenance checklist", href: "#" },
+    action: { label: "รายการตรวจสอบการบำรุงรักษา", href: "#" },
   },
   {
-    title: "New security alert preferences",
+    title: "ตัวเลือกการแจ้งเตือนความปลอดภัยรูปแบบใหม่",
     detail:
-      "You can now choose push notifications in addition to email for high-value transfers. Please enable the option for customers in your branch by Friday.",
-    date: "Mar 21, 2025",
+      "ขณะนี้คุณสามารถเลือกการแจ้งเตือนแบบพุชเพิ่มเติมจากอีเมลสำหรับการโอนยอดสูง โปรดเปิดใช้งานตัวเลือกนี้ให้ลูกค้าในสาขาของคุณภายในวันศุกร์",
+    date: "21 มี.ค. 2025",
     dateTime: "2025-03-21",
-    category: "Security",
+    category: "ความปลอดภัย",
     accent:
       "bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-200",
   },
   {
-    title: "Community outreach recap",
+    title: "สรุปกิจกรรมสู่ชุมชน",
     detail:
-      "Thanks to everyone who participated in the spring financial literacy workshops. Download the talking points to share with your teams this week.",
-    date: "Mar 19, 2025",
+      "ขอบคุณทุกคนที่เข้าร่วมเวิร์กช็อปความรู้ทางการเงินฤดูใบไม้ผลิ ดาวน์โหลดหัวข้อสำคัญเพื่อแบ่งปันกับทีมของคุณในสัปดาห์นี้",
+    date: "19 มี.ค. 2025",
     dateTime: "2025-03-19",
-    category: "Engagement",
+    category: "การมีส่วนร่วม",
     accent:
       "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200",
-    action: { label: "View recap deck", href: "#" },
+    action: { label: "ดูสไลด์สรุป", href: "#" },
   },
 ];
 
 const quickActions = [
   {
-    title: "Customer impact tracker",
+    title: "ตัวติดตามผลกระทบต่อลูกค้า",
     description:
-      "Review which regions are affected by the upcoming system maintenance.",
+      "ตรวจสอบภูมิภาคที่ได้รับผลกระทบจากการบำรุงรักษาระบบที่จะมาถึง",
     href: "#",
   },
   {
-    title: "Risk & compliance portal",
+    title: "พอร์ทัลความเสี่ยงและการปฏิบัติตามข้อกำหนด",
     description:
-      "Submit policy acknowledgements and review audit-ready documentation.",
+      "ส่งการยืนยันนโยบายและตรวจสอบเอกสารเพื่อการตรวจสอบ",
     href: "#",
   },
   {
-    title: "Incident response desk",
+    title: "ศูนย์ตอบสนองเหตุผิดปกติ",
     description:
-      "Log production incidents or request direct support from operations.",
+      "บันทึกเหตุการณ์การผลิตหรือขอรับการสนับสนุนจากฝ่ายปฏิบัติการโดยตรง",
     href: "#",
   },
 ];
 
 const supportContacts = [
-  { team: "Core Banking Ops", contact: "ops@goodbank.com", hours: "24/7" },
+  { team: "ปฏิบัติการระบบธนาคารแกนหลัก", contact: "ops@goodbank.com", hours: "ตลอด 24 ชั่วโมง ทุกวัน" },
   {
-    team: "Security Response",
+    team: "การตอบสนองด้านความปลอดภัย",
     contact: "security@goodbank.com",
-    hours: "6 AM – 10 PM ET",
+    hours: "06:00–22:00 น. ET",
   },
   {
-    team: "People Team",
+    team: "ทีมทรัพยากรบุคคล",
     contact: "people@goodbank.com",
-    hours: "9 AM – 6 PM ET",
+    hours: "09:00–18:00 น. ET",
   },
 ];
 
@@ -86,17 +86,14 @@ export function Welcome() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 lg:flex-row">
         <section className="w-full space-y-8 lg:w-[55%]">
           <span className="inline-flex items-center gap-2 rounded-full bg-blue-600/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 dark:bg-blue-500/20 dark:text-blue-200">
-            Daily admin brief
+            สรุปงานผู้ดูแลประจำวัน
           </span>
           <div className="space-y-4">
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-              Stay in sync with the GoodBank information board
+              ติดตามความคืบหน้าบนกระดานข้อมูลของ GoodBank
             </h1>
             <p className="max-w-2xl text-lg text-slate-600 dark:text-gray-300">
-              The operations team curates these updates to keep every branch
-              informed. Check the board each morning for the latest
-              announcements, action items, and support resources for your
-              customers.
+              ทีมปฏิบัติการได้คัดสรรอัปเดตเหล่านี้เพื่อให้ทุกสาขารับทราบข้อมูล ตรวจสอบกระดานทุกเช้าเพื่อดูประกาศล่าสุด งานที่ต้องทำ และแหล่งข้อมูลสนับสนุนสำหรับลูกค้าของคุณ
             </p>
           </div>
           <div className="flex flex-col gap-3 text-sm text-slate-500 dark:text-gray-400 sm:flex-row sm:items-center">
@@ -105,26 +102,26 @@ export function Welcome() {
                 className="inline-block h-2 w-2 rounded-full bg-emerald-500"
                 aria-hidden
               />
-              Systems operational
+              ระบบทำงานปกติ
             </div>
             <div className="flex items-center gap-2">
               <span
                 className="inline-block h-2 w-2 rounded-full bg-amber-500"
                 aria-hidden
               />
-              Review alerts before Friday 5 PM ET
+              ตรวจสอบการแจ้งเตือนก่อนวันศุกร์ เวลา 17:00 น. ET
             </div>
           </div>
           <div className="rounded-3xl border border-slate-200/80 bg-white/80 shadow-xl shadow-slate-900/5 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/80">
             <div className="flex items-center justify-between gap-4 border-b border-slate-200/60 px-6 py-5 dark:border-gray-800">
               <div>
-                <h2 className="text-xl font-semibold">Information board</h2>
+                <h2 className="text-xl font-semibold">กระดานข้อมูล</h2>
                 <p className="text-sm text-slate-500 dark:text-gray-400">
-                  Latest updates from the GoodBank admin team
+                  อัปเดตล่าสุดจากทีมผู้ดูแลของ GoodBank
                 </p>
               </div>
               <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:bg-gray-800 dark:text-gray-300">
-                Updated daily
+                อัปเดตรายวัน
               </span>
             </div>
             <ul className="divide-y divide-slate-200/70 dark:divide-gray-800">
@@ -181,10 +178,9 @@ export function Welcome() {
         </section>
         <aside className="w-full space-y-8 lg:w-[45%]">
           <div className="rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-lg shadow-slate-900/5 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/80">
-            <h2 className="text-lg font-semibold">Quick actions</h2>
+            <h2 className="text-lg font-semibold">การทำงานด่วน</h2>
             <p className="mt-1 text-sm text-slate-500 dark:text-gray-400">
-              Jump straight into the portals you need to keep customers
-              supported.
+              เข้าสู่พอร์ทัลที่คุณต้องการเพื่อดูแลลูกค้าได้ทันที
             </p>
             <ul className="mt-5 space-y-4">
               {quickActions.map((action) => (
@@ -205,10 +201,9 @@ export function Welcome() {
             </ul>
           </div>
           <div className="rounded-3xl border border-slate-200/80 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 text-slate-100 shadow-xl">
-            <h2 className="text-lg font-semibold">Need help?</h2>
+            <h2 className="text-lg font-semibold">ต้องการความช่วยเหลือไหม?</h2>
             <p className="mt-1 text-sm text-slate-300">
-              Contact the teams standing by to assist branches and frontline
-              staff.
+              ติดต่อทีมที่พร้อมช่วยเหลือสาขาและทีมหน้าสำนักงาน
             </p>
             <ul className="mt-6 space-y-4">
               {supportContacts.map((support) => (
@@ -235,3 +230,4 @@ export function Welcome() {
     </main>
   );
 }
+

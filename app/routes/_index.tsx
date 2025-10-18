@@ -3,11 +3,11 @@ import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "GoodBank | Information Board" },
+    { title: "GoodBank | กระดานข้อมูล" },
     {
       name: "description",
       content:
-        "Stay current with daily announcements and scheduled updates from the GoodBank administration team.",
+        "ติดตามประกาศประจำวันและอัปเดตตามกำหนดการจากทีมผู้ดูแลของ GoodBank",
     },
   ];
 }

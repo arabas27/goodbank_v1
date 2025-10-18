@@ -8,10 +8,10 @@ type NavItem = {
 };
 
 const navigation: NavItem[] = [
-  { label: "Information board", to: "/" },
-  { label: "Accounts", to: "#", disabled: true },
-  { label: "Reporting", to: "#", disabled: true },
-  { label: "Admin tools", to: "#", disabled: true },
+  { label: "กระดานข้อมูล", to: "/" },
+  { label: "บัญชี", to: "#", disabled: true },
+  { label: "รายงาน", to: "#", disabled: true },
+  { label: "เครื่องมือผู้ดูแล", to: "#", disabled: true },
 ];
 
 export function Navbar() {
@@ -68,7 +68,7 @@ export function Navbar() {
               GoodBank
             </span>
             <span className="text-xs font-medium uppercase tracking-[0.18em] text-slate-500 dark:text-gray-400">
-              Operations Portal
+              พอร์ทัลงานปฏิบัติการ
             </span>
           </span>
         </a>
@@ -82,7 +82,7 @@ export function Navbar() {
               >
                 {item.label}
                 <span className="rounded-full border border-slate-300 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 dark:border-gray-700 dark:text-gray-500">
-                  Soon
+                  เร็วๆ นี้
                 </span>
               </span>
             ) : (
@@ -107,7 +107,7 @@ export function Navbar() {
             href="mailto:support@goodbank.com"
             className="hidden rounded-full border border-blue-100 bg-blue-50/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 transition hover:border-blue-200 hover:bg-blue-100 md:inline-flex dark:border-blue-500/40 dark:bg-blue-500/20 dark:text-blue-200 dark:hover:border-blue-400"
           >
-            Support
+            ฝ่ายสนับสนุน
           </a>
           <button
             type="button"
@@ -121,16 +121,16 @@ export function Navbar() {
                 Avery Banks
               </span>
               <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-slate-500 dark:text-gray-400">
-                Admin
+                ผู้ดูแลระบบ
               </span>
             </span>
-            <span className="sr-only">Account settings</span>
+            <span className="sr-only">การตั้งค่าบัญชี</span>
           </button>
           <button
             type="button"
             onClick={() => setIsMenuOpen((open) => !open)}
             className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-slate-600 transition hover:border-blue-200 hover:text-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 md:hidden dark:border-gray-700 dark:bg-gray-900/80 dark:text-gray-200"
-            aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+            aria-label={isMenuOpen ? "ปิดเมนูนำทาง" : "เปิดเมนูนำทาง"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
           >
@@ -188,7 +188,7 @@ export function Navbar() {
                     >
                       {item.label}
                       <span className="rounded-full border border-slate-300 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400 dark:border-gray-700 dark:text-gray-500">
-                        Soon
+                        เร็วๆ นี้
                       </span>
                     </span>
                   ) : (
@@ -230,7 +230,7 @@ export function Navbar() {
                 className="flex items-center justify-between rounded-2xl border border-blue-100 bg-blue-50/80 px-4 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 transition hover:border-blue-200 hover:bg-blue-100 dark:border-blue-500/40 dark:bg-blue-500/10 dark:text-blue-200 dark:hover:border-blue-400"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact support
+                ติดต่อฝ่ายสนับสนุน
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"

@@ -1,61 +1,61 @@
-# Welcome to React Router!
+# ยินดีต้อนรับสู่ React Router!
 
-A modern, production-ready template for building full-stack React applications using React Router.
+เทมเพลตสมัยใหม่พร้อมใช้งานจริงสำหรับสร้างแอป React แบบฟูลสแตกด้วย React Router
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-## Features
+## ฟีเจอร์
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- เรนเดอร์ฝั่งเซิร์ฟเวอร์ (SSR)
+- Hot Module Replacement (HMR)
+- บันเดิลและปรับแต่งประสิทธิภาพของไฟล์
+- โหลดและมิวเทชันของข้อมูล
+- ใช้ TypeScript โดยค่าเริ่มต้น
+- ใช้ TailwindCSS สำหรับสไตล์
+- เอกสาร [React Router](https://reactrouter.com/)
 
-## Getting Started
+## เริ่มต้นใช้งาน
 
-### Installation
+### การติดตั้ง
 
-Install the dependencies:
+ติดตั้งแพ็กเกจที่จำเป็น:
 
 ```bash
 npm install
 ```
 
-### Development
+### โหมดพัฒนา
 
-Start the development server with HMR:
+เริ่มเซิร์ฟเวอร์พัฒนา (พร้อม HMR):
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+แอปจะใช้งานได้ที่ `http://localhost:5173`.
 
-## Building for Production
+## สร้างสำหรับโปรดักชัน
 
-Create a production build:
+สร้างบิลด์โปรดักชัน:
 
 ```bash
 npm run build
 ```
 
-## Deployment
+## การดีพลอย
 
-### Docker Deployment
+### ดีพลอยด้วย Docker
 
-To build and run using Docker:
+สั่ง build และรันผ่าน Docker:
 
 ```bash
 docker build -t my-app .
 
-# Run the container
+# รันคอนเทนเนอร์
 docker run -p 3000:3000 my-app
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+คอนเทนเนอร์สามารถดีพลอยบนแพลตฟอร์มที่รองรับ Docker เช่น:
 
 - AWS ECS
 - Google Cloud Run
@@ -64,24 +64,24 @@ The containerized application can be deployed to any platform that supports Dock
 - Fly.io
 - Railway
 
-### DIY Deployment
+### ดีพลอยเอง (DIY)
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+ถ้าคุณคุ้นเคยกับการดีพลอยแอป Node เซิร์ฟเวอร์ภายในโปรเจกต์นี้พร้อมใช้งานในโปรดักชัน
 
-Make sure to deploy the output of `npm run build`
+อย่าลืมดีพลอยผลลัพธ์จากคำสั่ง `npm run build`
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+├─ package.json
+├─ package-lock.json (หรือ pnpm-lock.yaml หรือ bun.lockb)
+├─ build/
+│  ├─ client/    # ไฟล์สแตติก
+│  └─ server/    # โค้ดฝั่งเซิร์ฟเวอร์
 ```
 
-## Styling
+## สไตลิง
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+เทมเพลตนี้ตั้งค่า [Tailwind CSS](https://tailwindcss.com/) มาให้แล้ว สามารถเปลี่ยนไปใช้เฟรมเวิร์ก CSS ที่คุณถนัดได้
 
 ---
 
-Built with ❤️ using React Router.
+สร้างด้วยความรัก และ React Router
