@@ -9,6 +9,9 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import { AuthProvider } from "~/lib/auth";
+import { TopBar } from "~/components/TopBar";
+import { BottomNav } from "~/components/BottomNav";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,7 +45,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <AuthProvider>
+      <TopBar />
+      <div className="pt-16 pb-16 min-h-[100dvh]">
+        <Outlet />
+      </div>
+      <BottomNav />
+    </AuthProvider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
