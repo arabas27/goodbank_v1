@@ -83,7 +83,6 @@ export function Welcome() {
               customers.
             </p>
           </div>
-
           <div className="flex flex-col gap-3 text-sm text-slate-500 dark:text-gray-400 sm:flex-row sm:items-center">
             <div className="flex items-center gap-2">
               <span
@@ -192,7 +191,6 @@ export function Welcome() {
               Contact the teams standing by to assist branches and frontline
               staff.
             </p>
-
             <ul className="mt-6 space-y-4">
               {supportContacts.map((support) => (
                 <li
