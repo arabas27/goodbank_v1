@@ -33,7 +33,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-white font-sans text-slate-900 antialiased dark:bg-gray-950 dark:text-gray-100">
+        <a
+          href="#main-content"
+          className="absolute left-6 top-4 z-[60] rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-blue-300 [&:not(:focus-visible)]:sr-only"
+        >
+          Skip to main content
+        </a>
+        <Navbar />
         {children}
         <Navbar />
         <ScrollRestoration />

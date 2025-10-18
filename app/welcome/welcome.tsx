@@ -1,9 +1,20 @@
-const notices = [
+type Notice = {
+  title: string;
+  detail: string;
+  date: string;
+  dateTime: string;
+  category: string;
+  accent: string;
+  action?: { label: string; href: string };
+};
+
+const notices: Notice[] = [
   {
     title: "Scheduled maintenance window",
     detail:
       "Online banking will be unavailable Sunday from 1:00–3:00 AM ET while we deploy infrastructure upgrades. Mobile debit card transactions will remain online.",
     date: "Mar 24, 2025",
+    dateTime: "2025-03-24",
     category: "Systems",
     accent: "bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-200",
     action: { label: "Maintenance checklist", href: "#" },
@@ -13,6 +24,7 @@ const notices = [
     detail:
       "You can now choose push notifications in addition to email for high-value transfers. Please enable the option for customers in your branch by Friday.",
     date: "Mar 21, 2025",
+    dateTime: "2025-03-21",
     category: "Security",
     accent:
       "bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-200",
@@ -22,6 +34,7 @@ const notices = [
     detail:
       "Thanks to everyone who participated in the spring financial literacy workshops. Download the talking points to share with your teams this week.",
     date: "Mar 19, 2025",
+    dateTime: "2025-03-19",
     category: "Engagement",
     accent:
       "bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200",
@@ -66,7 +79,10 @@ const supportContacts = [
 
 export function Welcome() {
   return (
-    <main className="min-h-screen bg-slate-50 pb-16 pt-20 text-slate-900 dark:bg-gray-950 dark:text-gray-100">
+    <main
+      id="main-content"
+      className="min-h-screen bg-slate-50 pb-16 pt-24 text-slate-900 dark:bg-gray-950 dark:text-gray-100"
+    >
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 lg:flex-row">
         <section className="w-full space-y-8 lg:w-[55%]">
           <span className="inline-flex items-center gap-2 rounded-full bg-blue-600/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 dark:bg-blue-500/20 dark:text-blue-200">
@@ -124,7 +140,10 @@ export function Welcome() {
                       <h3 className="text-lg font-semibold text-slate-900 dark:text-gray-100">
                         {notice.title}
                       </h3>
-                      <time className="text-sm text-slate-500 dark:text-gray-400">
+                      <time
+                        dateTime={notice.dateTime}
+                        className="text-sm text-slate-500 dark:text-gray-400"
+                      >
                         {notice.date}
                       </time>
                     </div>
